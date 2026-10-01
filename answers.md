@@ -30,11 +30,18 @@ Therefore, $S(n) = O(logn)$
 
 - **5) (2 pts)** What is the work and span of `construct_output`?
 
+Work: construct_output, as I have written it, loops through positions once, and it performs one command per line. Then it performs one final command
 
+This gives $W(n) = O(n)$ as it iteratively adds one item to the array for every $n$ item in a
+
+Span: construct_output, as I have written it, sequentially adds one item for every $n$ item in a, so the longest chain of dependency is the whole algorithim
+
+This gives an identical $S(n) = O(n)$
 
 - **6) (2 pts)** What is the work and span of `supersort`?
 
+Work: supersort calls 3 commands that do linear work, so $W(n) = O(3n) = O(n)$
 
-
+Span: supersort calls 2 commands of linear span and one of logarithmic span, so $S(n) = O(2n + logn) = O(n)$
 
 - **8) (2 pts)** What is work and span of `count_values_mr`?
