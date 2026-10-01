@@ -45,3 +45,13 @@ Work: supersort calls 3 commands that do linear work, so $W(n) = O(3n) = O(n)$
 Span: supersort calls 2 commands of linear span and one of logarithmic span, so $S(n) = O(2n + logn) = O(n)$
 
 - **8) (2 pts)** What is work and span of `count_values_mr`?
+
+Work: The map-reduce version still does the same linear work; optimizing the span does not change it
+
+So, $W(n) = O(n)$
+
+Span: This version allows each list to be split into pieces, and the longest chain of dependency is the longest branch
+
+If it is split into $k$ pieces, the height of the longest branch is $h = log{k}{n}$
+
+So, the span is logorithmic; $S(n) = O(logn)$
