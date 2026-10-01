@@ -85,12 +85,11 @@ def count_values_mr(a, k):
 def count_map(value):
     # hint: this function should return a list, even if that list
     # contains a single tuple
-    ###TODO
-    pass
+    return [(value, 1)]
 
 def count_reduce(group):
-    ###TODO
-    pass
+    x, values = group
+    return (x, sum(values))
 
 
 # the below functions are provided for use above.
