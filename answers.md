@@ -40,7 +40,8 @@ This gives an identical $S(n) = O(n)$
 
 - **6) (2 pts)** What is the work and span of `supersort`?
 
+Work: supersort calls 3 commands that do linear work, so $W(n) = O(3n) = O(n)$
 
-
+Span: supersort calls 2 commands of linear span and one of logarithmic span, so $S(n) = O(2n + logn) = O(n)$
 
 - **8) (2 pts)** What is work and span of `count_values_mr`?
