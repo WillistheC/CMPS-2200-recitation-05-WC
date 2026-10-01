@@ -30,7 +30,9 @@ Therefore, $S(n) = O(logn)$
 
 - **5) (2 pts)** What is the work and span of `construct_output`?
 
-Work:
+Work: construct_output, as I have written it, loops through positions once, and it performs one command per line. Then it performs one final command
+
+This gives $W(n) = W(n) + 1 = O(n + 1) = O(n)$ 
 
 
 - **6) (2 pts)** What is the work and span of `supersort`?
