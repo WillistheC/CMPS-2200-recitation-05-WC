@@ -32,11 +32,11 @@ Therefore, $S(n) = O(logn)$
 
 Work: construct_output, as I have written it, loops through positions once, and it performs one command per line. Then it performs one final command
 
-This gives $W(n) = W(n) + 1 = O(n + 1) = O(n)$ 
+This gives $W(n) = O(n)$ as it iteratively adds one item to the array for every $n$ item in a
 
-Span: construct_output, as I have written it, loops through doing one command per item in positions, and then one final command
+Span: construct_output, as I have written it, sequentially adds one item for every $n$ item in a, so the longest chain of dependency is the whole algorithim
 
-This gives an identical $S(n) = S(n) + 1 = O(n + 1) = O(n)$
+This gives an identical $S(n) = O(n)$
 
 - **6) (2 pts)** What is the work and span of `supersort`?
 
