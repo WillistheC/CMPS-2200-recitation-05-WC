@@ -29,8 +29,12 @@ def count_values(a, k):
     >>> count_values([2,2,1,0,1,0,1,3], 3)
     [2, 3, 2, 1]
     """
-    ###TODO
-    pass
+    if len(a) == 0:
+      return []
+    counts = [0] * (k+1)
+    for x in a:
+      counts[x] += 1
+    return counts
     
 def get_positions(counts):
     """
@@ -43,8 +47,11 @@ def get_positions(counts):
     >>> get_positions([2, 3, 2, 1])
     [0, 2, 5, 7]    
     """
-    ###TODO
-    pass
+    pos = [0]
+    for x in counts:
+        pos.append(pos[len(pos) - 1] + x)
+    pos.pop()
+    return pos
     
 def construct_output(a, positions):
     """
@@ -60,8 +67,11 @@ def construct_output(a, positions):
     >>> construct_output([2,2,1,0,1,0,1,3], [0, 2, 5, 7])
     [0,0,1,1,1,2,2,3]    
     """
-    ###TODO
-    pass
+    final = []
+    for i in range(len(positions)):
+        final += [i - 1] * (positions[i] - len(final))
+    final += [final[len(final) - 1] + 1] * (len(a) - len(final)) #loop does not add highest value of a
+    return final
 
 def count_values_mr(a, k):
     """
